@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Credit Card Form</title>
+  <link rel="icon" type="image/x-icon" href="Puppies-PNG-Transparent-Image.png">
+  <style>
+    /* CSS styles for the credit card form */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.063);
+    }
+
+    .form-section {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #74767a;
+      color: #000000;
+    }
+
+    .card-number-group {
+      display: flex;
+    }
+
+    .card-number-group input {
+      flex: 1;
+      margin-right: 5px;
+    }
+
+    .cvv-group input {
+      width: calc(30% - 5px);
+      margin-right: 5px;
+    }
+
+    .cvv-group input:last-child {
+      margin-right: 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    img {
+      height: 300px;
+    }
+    h2{
+      color: #4566a0;
+    }
+    p{
+      color:#0bec1a;
+    }
+    em{
+      color: #122f62;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <h2>Credit Card Information</h2>
+      <form>
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <div class="card-number-group">
+            <input type="text" id="card-number-1" maxlength="4" placeholder="0000">
+            <input type="text" id="card-number-2" maxlength="4" placeholder="0000">
+            <input type="text" id="card-number-3" maxlength="4" placeholder="0000">
+            <input type="text" id="card-number-4" maxlength="4" placeholder="0000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cardholder-name">Cardholder Name</label>
+          <input type="text" id="cardholder-name" placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="expiry-month">Expiration Date</label>
+          <div class="expiry-group">
+            <select id="expiry-month">
+              <option value="" disabled selected>Month</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <!-- Add more month options here -->
+            </select>
+            <select id="expiry-year">
+              <option value="" disabled selected>Year</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+              <option value="2032">2032</option>
+              <option value="2033">2033</option>
+              <option value="2034">2034</option>
+              <option value="2035">2035</option>
+              <!-- Add more year options here -->
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <div class="cvv-group">
+            <input type="number" id="cvv" maxlength="4" placeholder="CVV" pattern="[0-9]{4}-[0-9]{4}">
+          </div>
+          <P>Your billing price is $10.
+            Your card won't be charged.
+          </P>
+          
+          <div id="container">
+            <h1>Checkout</h1>
+              <div class="item-details">
+                <h2>Item</h2>
+                <p>Price: <span class="old-price">$13</span></p>
+                <p>Discounted Price: <span class="new-price">$10</span></p>
+                <label for="quantity">Quantity:</label>
+                <em>One(1)</em>
+              </div>
+          </div>
+        </div>
+      <button type="submit" value="submit">Submit</button>
+          
+      </form>
+      </form>
+    </div>
+    <div class="form-section">
+      <h2>Shipping Address</h2>
+      <form>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" placeholder="Enter your address">
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" placeholder="Enter your city">
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <input type="text" id="state" placeholder="Enter your state">
+        </div>
+        <div class="form-group">
+          <label for="zipcode">Zip Code</label>
+          <input type="text" id="zipcode" placeholder="Enter your zip code">
+        </div>
+        <img src="https://th.bing.com/th/id/OIP.mRMP4AOoDLtnMpiVpcLzswHaHa?pid=ImgDet&w=195&h=195&c=7&dpr=1.3">
+      </form>
+    </div>
+  </div>
+
+
+
+
+</body>
+<script>
+  const cardNumberInput = document.getElementById('card-number');
+    const cardExpiryInput = document.getElementById('card-expiry');
+    const cardCvvInput = document.getElementById('card-cvv');
+
+    cardNumberInput.addEventListener('input', formatCardNumber);
+    cardExpiryInput.addEventListener('input', formatExpiryDate);
+    cardCvvInput.addEventListener('input', formatCvv);
+
+    function formatCardNumber() {
+      let cardNumber = cardNumberInput.value.replace(/\s/g, '');
+      cardNumber = cardNumber.replace(/[^\d]/g, '');
+      let formattedNumber = '';
+
+      if (cardNumber.length > 16) {
+          cardNumber = cardNumber.slice(0, 16);
+        }
+
+      for (let i = 0; i < cardNumber.length; i++) {
+        if (i > 0 && i % 4 === 0) {
+          formattedNumber += ' ';
+        }
+        formattedNumber += cardNumber[i];
+      }
+
+      cardNumberInput.value = formattedNumber.trim();
+    }
+
+    function formatExpiryDate() {
+      let expiryDate = cardExpiryInput.value.replace(/\s/g, '');
+      expiryDate = expiryDate.replace(/[^\d]/g, '');
+      let formattedDate = '';
+
+      for (let i = 0; i < expiryDate.length; i++) {
+        if (i === 2) {
+          formattedDate += '/';
+        }
+        formattedDate += expiryDate[i];
+      }
+
+      cardExpiryInput.value = formattedDate.trim();
+    }
+
+    function formatCvv() {
+      let cvv = cardCvvInput.value.replace(/[^\d]/g, '');
+
+      if (cardNumberInput.value.startsWith('4')) {
+        cvv = cvv.slice(0, 3);
+      } else {
+        cvv = cvv.slice(0, 4);
+      }
+
+      cardCvvInput.value = cvv;
+    }
+    function updateCardLogo(cardNumber) {
+      let cardLogo = '';
+
+      if (cardNumber.startsWith('4')) {
+        cardLogo = 'https://th.bing.com/th/id/R.23382e45efbe21479426c2f7987bec71?rik=7tpa1igTRkT4lw&pid=ImgRaw&r=0';
+      } else if (cardNumber.startsWith('5')) {
+        cardLogo = 'https://th.bing.com/th/id/R.3199df0e6d1daa6b20a55c39e60096d8?rik=DBXdYJQdMKduwA&pid=ImgRaw&r=0';
+      } else if (cardNumber.startsWith('6')) {
+        cardLogo = 'https://th.bing.com/th/id/R.e6119b88ef650d493e2ca94fb7e4bec4?rik=74j0E8GSid0LUg&pid=ImgRaw&r=0';
+      } else if (cardNumber.startsWith('34')) {
+        cardLogo = 'https://th.bing.com/th/id/R.759a4f4627d9dbfb40e1da9611d99a7b?rik=cN0xA38k5jc4hA&pid=ImgRaw&r=0';
+      } else {
+        cardLogo = 'https://th.bing.com/th/id/R.31eeac4accea0dcbee2813cd49cf3969?rik=rYpW%2bnTGACTjNw&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_48300.png&ehk=YHn4ePIVbSctgtzXVAw2UyRN8K%2bsLqpgbaeOVmzwkMg%3d&risl=&pid=ImgRaw&r=0';
+      }
+
+      cardLogoImg.src = cardLogo;
+    }
+   
+</script>
+</html>
